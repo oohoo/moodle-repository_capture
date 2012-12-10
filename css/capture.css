@@ -1,0 +1,250 @@
+/**
+ * *************************************************************************
+ * *                            Capture                                   **
+ * *************************************************************************
+ * @package     repository_capture                                        **
+ * @subpackage  capture                                                   **
+ * @name        Capture                                                   **
+ * @copyright   oohoo.biz                                                 **
+ * @link        http://oohoo.biz                                          **
+ * @author      Nicolas Bretin                                            **
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
+ * *************************************************************************
+ * ************************************************************************ */
+
+/*Background must be white*/
+html, body
+{
+    background: transparent !important;
+}
+
+#div_capture .block_intro
+{
+    padding: 5px 5px 10px 5px;
+    margin: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25) inset, 0 2px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+#div_capture .block_intro h3
+{
+    margin-top: 5px;
+}
+
+#div_capture .block_intro input
+{
+    margin-bottom:2px;
+}
+
+#div_capture .label_info
+{
+    width: 200px;
+    display: inline-block;
+}
+
+#div_capture #saveas, #div_capture #setauthor
+{
+    width: 250px;
+}
+
+#div_capture #setlicense
+{
+    width: 258px;
+    height: 25px;
+    border-width: 1px;
+    border-bottom-color: #666;
+}
+
+#div_videorecorder
+{
+    border-radius: 4px;
+    margin: 10px auto;
+    min-width: 450px;
+    padding: 10px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25) inset, 0 2px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+#div_videorecorder #record_toolbar
+{
+    padding: 10px;
+    text-align: left;
+    position:relative;
+}
+
+/*----------------------------Sliders-----------------------------------------*/
+#slider_time
+{
+    border-bottom: 0;
+}
+
+#slider_time .ui-slider-handle
+{
+    height: 21px;
+}
+
+#slider_crop
+{
+    height: 4px;
+    border-top: 0;
+    margin-bottom: 15px;
+}
+
+#slider_crop .ui-slider-handle
+{
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    background: transparent url("../pix/slider-handle-crop.png") no-repeat center center;
+    border: 0;
+}
+#slider_crop .ui-slider-handle:hover
+{
+    background-image: url("../pix/slider-handle-crop-hover.png");
+}
+
+#slider_crop .ui-slider-range
+{
+    background: #A0A0A0;
+}
+
+/*----------------------------Toolbar-----------------------------------------*/
+
+#record_toolbar .ui-icon
+{
+    padding : 0;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+}
+
+#record_toolbar .ui-icon-record
+{
+    background: url("../pix/btn_record.png") no-repeat center center;
+}
+#record_toolbar .ui-state-active .ui-icon-record
+{
+    background: url("../pix/btn_record_selected.png") no-repeat center center;
+}
+
+#record_toolbar #btn_stop
+{
+    margin-left: 1px;
+}
+
+#record_toolbar .ui-icon-stop
+{
+    background: url("../pix/btn_stop.png") no-repeat center center;
+    
+}
+
+#record_toolbar .ui-icon-play
+{
+    background: url("../pix/btn_play.png") no-repeat center center;
+}
+#record_toolbar .ui-state-active .ui-icon-play
+{
+    background: url("../pix/btn_pause.png") no-repeat center center;
+}
+
+#record_toolbar .ui-icon-save
+{
+    background: url("../pix/btn_save.png") no-repeat center center;
+    margin-left: -3px;
+}
+#record_toolbar.audioonly .ui-icon-save
+{
+    background: url("../pix/btn_save_audio.png") no-repeat center center;
+}
+#record_toolbar.photoonly .ui-icon-save
+{
+    background: url("../pix/btn_save_photo.png") no-repeat center center;
+}
+
+#record_toolbar #btn_settings
+{
+    float:right;
+}
+
+#record_toolbar .ui-icon-settings
+{
+    background: url("../pix/btn_settings.png") no-repeat center center;
+}
+
+#record_toolbar #btn_help
+{
+    float: right;
+    margin: 2px 2px 2px 1px;
+}
+
+#record_toolbar #btn_help .ui-button-text
+{
+    padding: 4px 4px 7px 5px;
+}
+
+#record_toolbar #ipt_time
+{
+    height: 24px;
+    width:80px;
+    border: 1px solid #AAAAAA;
+    background: #EEEEEE;
+    text-align: center;
+}
+
+#record_toolbar #btn_record_photo,
+#record_toolbar #btn_reset
+{
+    display:none;
+}
+
+#record_toolbar.photoonly #btn_record_l, 
+#record_toolbar.photoonly #btn_stop, 
+#record_toolbar.photoonly #btn_play_l, 
+#record_toolbar.photoonly #ipt_time,
+#record_toolbar.photoonly #slider_time,
+#record_toolbar.photoonly #slider_crop
+{
+    display:none;
+}
+
+#record_toolbar.photoonly #btn_record_photo,
+#record_toolbar.photoonly #btn_reset
+{
+    display:inline;
+}
+
+#record_toolbar.photoonly #btn_record_photo .ui-icon-record
+{
+    background: url("../pix/btn_record_photo.png") no-repeat center center;
+    margin-left: -3px;
+}
+
+#record_toolbar.photoonly #btn_reset .ui-icon-reset
+{
+    background: url("../pix/btn_reset.png") no-repeat center center;
+    margin-left: -3px;
+}
+
+/*----------------------------Saving------------------------------------------*/
+#record_toolbar #div_video_conversion
+{
+    position: absolute;
+    background: #000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#record_toolbar #txt_video_conversion
+{
+    margin: 15px 0 0 0;
+    padding-left: 10px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#record_toolbar #video_conversion
+{
+    margin: 5px 10px 0 10px;
+}
