@@ -34,8 +34,10 @@ if(typeof jQuery != 'undefined')
         var mp3_ok = false;
         var mp4_ok = false;
         var jpg_ok = false;
+        var all_ok = true;
         $('input[name="accepted_types[]"]', parent_block).each(function()
         {
+            all_ok = false;
             if($(this).val() == '.mp3')
             {
                 mp3_ok = true;
@@ -50,15 +52,15 @@ if(typeof jQuery != 'undefined')
             }
         });
         //And hide the blocks
-        if(mp3_ok)
+        if(all_ok || mp3_ok)
         {
             $('#block_mp3').show();
         }
-        if(mp4_ok)
+        if(all_ok || mp4_ok)
         {
             $('#block_mp4').show();
         }
-        if(jpg_ok)
+        if(all_ok || jpg_ok)
         {
             $('#block_jpg').show();
         }
