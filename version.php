@@ -13,9 +13,9 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
  * *************************************************************************
  * ************************************************************************ */
-$plugin->version = 2012121001;
+$plugin->version = 2012121200;
 $plugin->requires = 2012062500;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0.0 (Build: 2012121001)';
+$plugin->release = '1.0.0 (Build: 2012121200)';
 $plugin->component = 'repository_capture';
 $plugin->cron = 720; //Every 12 hours
