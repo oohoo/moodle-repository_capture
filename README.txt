@@ -6,12 +6,18 @@
 Description
 --------------------------------------------------------------------------------
 
-This repository allows users to record directly video, sound and take photo 
+This repository allows users to record video, sound and take a photo
 WITHOUT a streaming server.
-Activate the repository, and each time you can upload a file, click on the
-repository "Capture" and choose if you want to record a sound with your 
-microphone, or a video or a picture taken from your camera.
-After recording, you can edit your video to only select the wanted part!
+This works as any other Moodle 2.x repository. It must first be enabled.
+Once enabled, it will show up in the file picker. Simply click on the "Capture"
+repository and choose if you want to record a sound, a video or a picture taken
+from your webcam.
+
+Once you are done recording, you can edit your video by trimming the beginning
+and the end.
+
+Note: You must install FFMPEG on your Moodle server inorder for this plugin 
+to work.
 
 --------------------------------------------------------------------------------
 Prerequisites

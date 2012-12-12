@@ -38,6 +38,7 @@ $string['default_filename'] = 'Enregistrement';
 $string['download'] = 'Télécharger';
 $string['err_no_hardware'] = 'La webcam ou le microphone est absent. Brancher votre materiel et rafraichisser la page (En fonction de votre navigateur, il sera sans doute nécessaire de le redemarrer.)';
 $string['err_record_ffmpeg_exec'] = 'L\'execution de ffmpeg avec ce chemin a échoué. Vérifier le chemin et réessayer.';
+$string['err_record_file_not_exists'] = 'L\'enregistrement n\'existe pas. Il est possible que le serveur ne soit pas bien configuré. Vérifier que le dossier temporaire est autorisé en écriture et que FFMPEG est bien installé.';
 $string['err_record_fps_range'] = 'La valeur doit être comprise entre 10 et 60';
 $string['err_record_quality_range'] = 'La valeur doit être comprise entre 20 et 100';
 $string['pluginname'] = 'Capture';

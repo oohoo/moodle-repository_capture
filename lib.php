@@ -489,6 +489,24 @@ class repository_capture extends repository
         $zip->extractTo($folder . 'video' . $ds);
         $zip->close();
 
+        //Check if the path is already executable
+        if (!is_executable(str_replace('"', '', $this->record_ffmpeg)))
+        {
+            $res = '';
+            if (PHP_OS == 'WINNT')
+            {
+                $res = shell_exec("where {$this->record_ffmpeg}");
+            }
+            else
+            {
+                $res = shell_exec("which {$this->record_ffmpeg}");
+            }
+            //If empty then error
+            if ($res == '')
+            {
+                throw new moodle_exception('err_record_ffmpeg_exec', 'repository_capture');
+            }
+        }
         //If it is a video
         if (!$audioonly && !$photoonly)
         {
@@ -502,6 +520,12 @@ class repository_capture extends repository
         {
             //Picture mode, copy the only image in the result place
             copy($folder . 'video' . $ds . 'img000001.jpg', $folder . $record->filename);
+        }
+        
+        //Check If file exists
+        if(!is_file($folder . $record->filename) || !is_readable($folder . $record->filename))
+        {
+            throw new moodle_exception('err_record_file_not_exists', 'repository_capture');
         }
 
         //Check mime type

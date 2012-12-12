@@ -38,6 +38,7 @@ $string['default_filename'] = 'Recording';
 $string['download'] = 'Download';
 $string['err_no_hardware'] = 'Camera or microphone is missing. Please connect your device and refresh the page (depending of your browser, you may need to restart your browser)';
 $string['err_record_ffmpeg_exec'] = 'Execution of this ffmpeg path failed. Please check the path and try again.';
+$string['err_record_file_not_exists'] = 'The recording does not exist. There is probably a problem with the server configuration. Did you check the temp folder is writtable and if FFMPEG is well installed ?';
 $string['err_record_fps_range'] = 'Value must be in the range 10 - 60';
 $string['err_record_quality_range'] = 'Value must be in the range 20 - 100';
 $string['pluginname'] = 'Capture';
