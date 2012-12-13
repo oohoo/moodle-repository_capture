@@ -24,7 +24,7 @@ Prerequisites
 --------------------------------------------------------------------------------
 
 Server side:
- - FFMPEG Recent version or AVCONV. In order for teh conversion to work, ffmpeg or avconv must have
+ - FFMPEG Recent version or AVCONV. In order for the conversion to work, ffmpeg or avconv must have
    the audio codec "aac".
  - And nothing else!
 
