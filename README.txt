@@ -10,8 +10,8 @@ This repository allows users to record video, sound and take a photo
 WITHOUT a streaming server.
 This works as any other Moodle 2.x repository. It must first be enabled.
 Once enabled, it will show up in the file picker. Simply click on the "Capture"
-repository and choose if you want to record a sound, a video or a picture taken
-from your webcam.
+repository and choose whether you want to record a sound, video or a picture taken
+with your webcam.
 
 Once you are done recording, you can edit your video by trimming the beginning
 and the end.
@@ -24,12 +24,12 @@ Prerequisites
 --------------------------------------------------------------------------------
 
 Server side:
- - FFMPEG Recent version or AVCONV. In order to works ffmpeg or avconv must have
+ - FFMPEG Recent version or AVCONV. In order for teh conversion to work, ffmpeg or avconv must have
    the audio codec "aac".
  - And nothing else!
 
 Client side: 
- - Flash Player - last version
+ - Flash Player - latest version
  - Javascript activated
  - Microphone for video and audio recording
  - Camera for video and photo
@@ -48,7 +48,7 @@ Installation
           -> Manage repositories
  5. Set the default fields for the repository.
 
-Note: You can customize the access to each functionalities (audio, video, photo)
+Note: You can customize the access to each functionality (audio, video, photo)
 with capabilities:
   - repository/capture:view    - The general access
   - repository/capture:video
