@@ -21,7 +21,7 @@ $string['btn_help_help'] = 'Recording instructions:<br>
 <li>Use the recording button to record your sound or video</li>
 <li>You can replay the recording with the play button</li>
 <li>Use the two triangular handles to reduce the recording to only one part of your video</li>
-<li>After finishing editing the recording, click on the Save button to send your recording (Processing can take a will)</li>
+<li>After finishing editing the recording, click on the Save button to send your recording (Processing can take a while)</li>
 </ol>
 ';
 $string['btn_photo'] = 'Take a picture';
@@ -52,15 +52,15 @@ $string['radio_yes'] = 'Yes';
 $string['record_audio'] = 'Allow recording audio';
 $string['record_audio_help'] = 'Select yes if you want to allow users to record audio with the microphone';
 $string['record_ffmpeg'] = 'FFMPEG exec path';
-$string['record_ffmpeg_help'] = 'The path of ffmpeg (or avconv depending of your system). Generaly <b>ffmpeg</b> is enough but on some server, it needs the full path like <b>"C:\Program Files\ffmpeg\bin\ffmpeg.exe"</b> (quotes are important if there is spaces in the path)';
+$string['record_ffmpeg_help'] = 'The path of ffmpeg (or avconv depending of your system). Generaly <b>ffmpeg</b> is enough but on some server, it needs the full path like <b>"C:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe"</b> (quotes are important if there is any spaces in the path)';
 $string['record_fps'] = 'The framerate';
 $string['record_fps_help'] = 'Set the framerate in frames per second. <b>Default = 15</b>.<br>
-<b>Note</b>: More there is frames per seconds, more the video size will be big and the rendering slow. Max FPS 60';
+<b>Note</b>: The higher the frames-per-second rate gets, the larger the video file size will be, and the slower the rendering will be. Max FPS 60.';
 $string['record_photo'] = 'Allow taking picture from the webcam';
 $string['record_photo_help'] = 'Select yes if you want to allow users to take a picture from the webcam';
 $string['record_quality'] = 'Record Quality (in %)';
 $string['record_quality_help'] = 'Default 70%. 100% is the best quality.<br>
-<b>Note</b>: More the quality is high, the more time it will take to encode the video';
+<b>Note</b>: The higher the quality goes, the longer it will take to encode the video"';
 $string['record_video'] = 'Allow recording video';
 $string['record_video_help'] = 'Select yes if you want to allow users to record video with the webcam and microphone';
 $string['saveas'] = 'File name: ';
