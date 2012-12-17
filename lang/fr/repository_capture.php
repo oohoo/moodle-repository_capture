@@ -50,7 +50,7 @@ $string['capture:view'] = 'Utiliser Capture audio dans le gestionnaire de fichie
 $string['radio_no'] = 'Non';
 $string['radio_yes'] = 'Oui';
 $string['record_audio'] = 'Autoriser les enregistrements audio';
-$string['record_audio_help'] = 'Selectionner Oui pour autoriser les utilisateurs a enregistrer des fichiers audio avec leur microphone';
+$string['record_audio_help'] = 'Sélectionner Oui pour autoriser les utilisateurs à enregistrer des fichiers audio avec leur microphone';
 $string['record_ffmpeg'] = 'Chemin d\'execution de FFMPEG';
 $string['record_ffmpeg_help'] = 'Le chemin d\'execution de ffmpeg(ou avconv en fonction de votre système). En géneral <b>ffmpeg</b> est suffisant mais sur certains serveur il sera necessaire d\inscrire le chemin complet comme <b>"C:\Program Files\ffmpeg\bin\ffmpeg.exe"</b> (les guillemets sont important s\'il y a des espaces dans le chemin)';
 $string['record_fps'] = 'The nombre d\'images par seconde';
@@ -62,7 +62,7 @@ $string['record_quality'] = 'Qualité d\'enregistrement (in %)';
 $string['record_quality_help'] = 'Defaut 70%. 100% étant la meilleur qualité.<br>
 <b>Note</b> : Plus la qualité est élevée, plus il faudra du temps pour le traitement de fin';
 $string['record_video'] = 'Autoriser l\'enregistrement vidéo';
-$string['record_video_help'] = 'Selectionner Oui pour autoriser les utilisateurs a enregistrer des vidéos avec leur webcam et microphone';
+$string['record_video_help'] = 'Sélectionner Oui pour autoriser les utilisateurs à enregistrer des vidéos avec leur webcam et microphone';
 $string['saveas'] = 'Nom du fichier : ';
 $string['setauthor'] = 'Auteur : ';
 $string['setlicense'] = 'Licence : ';

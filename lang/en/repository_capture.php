@@ -61,7 +61,7 @@ $string['record_photo_help'] = 'Select yes if you want to allow users to take a 
 $string['record_quality'] = 'Record Quality (in %)';
 $string['record_quality_help'] = 'Default 70%. 100% for best quality.<br>
 <b>Note</b>: The higher the quality, the more time it will take to encode the video';
-$string['record_video'] = 'Allow audio recording';
+$string['record_video'] = 'Allow video recording';
 $string['record_video_help'] = 'Select yes if you want to allow users to record video with the webcam and microphone';
 $string['saveas'] = 'File name: ';
 $string['setauthor'] = 'Author: ';

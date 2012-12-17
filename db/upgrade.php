@@ -38,6 +38,12 @@ function xmldb_repository_capture_upgrade($oldversion)
         //Updated language files
         upgrade_plugin_savepoint(true, 2012121301, 'repository', 'capture');
     }
+    
+    if ($oldversion < 2012121700)
+    {
+        //Corrections on the config form
+        upgrade_plugin_savepoint(true, 2012121700, 'repository', 'capture');
+    }
 
     return true;
 }

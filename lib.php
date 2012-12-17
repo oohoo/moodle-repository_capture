@@ -251,15 +251,15 @@ class repository_capture extends repository
      */
     public static function type_form_validation($mform, $data, $errors)
     {
-        if ($data['record_video'] == '')
+        if ($data['record_video'] === '')
         {
             $errors['record_video'] = get_string('err_required', 'form');
         }
-        if ($data['record_audio'] == '')
+        if ($data['record_audio'] === '')
         {
             $errors['record_audio'] = get_string('err_required', 'form');
         }
-        if ($data['record_photo'] == '')
+        if ($data['record_photo'] === '')
         {
             $errors['record_photo'] = get_string('err_required', 'form');
         }
