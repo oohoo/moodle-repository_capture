@@ -44,6 +44,12 @@ function xmldb_repository_capture_upgrade($oldversion)
         //Corrections on the config form
         upgrade_plugin_savepoint(true, 2012121700, 'repository', 'capture');
     }
+    
+    if ($oldversion < 2013072200)
+    {
+        //Patch the problem with chrome speed audio recording
+        upgrade_plugin_savepoint(true, 2013072200, 'repository', 'capture');
+    }
 
     return true;
 }

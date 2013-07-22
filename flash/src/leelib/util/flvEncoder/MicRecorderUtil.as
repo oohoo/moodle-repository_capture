@@ -1,4 +1,4 @@
-package leelib.util.flvEncoder 
+﻿package leelib.util.flvEncoder 
 {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
@@ -20,12 +20,14 @@ package leelib.util.flvEncoder
 		private var _startTime:uint;
 		private var _microphone:Microphone;
 		private var _byteArray:ByteArray = new ByteArray();
+		private var _rate:int = 44;
 		
 		private var _completeEvent:Event = new Event ( Event.COMPLETE );
 		
 
 		public function MicRecorderUtil(microphone:Microphone)
 		{
+			_rate = microphone.rate;
 			_microphone = microphone;
 		}
 		
@@ -34,7 +36,8 @@ package leelib.util.flvEncoder
 			_startTime = getTimer();
 			
 			_byteArray.length = 0;
-
+			
+			_microphone.rate = _rate;
 			_microphone.addEventListener(SampleDataEvent.SAMPLE_DATA, onSampleData);
 			_microphone.addEventListener(StatusEvent.STATUS, onStatus); // (may never fire)
 		}
@@ -81,7 +84,6 @@ package leelib.util.flvEncoder
 		{
 			// ADD THIS LATER POSSIBLY
 			// _recordingEvent.time = getTimer() - _startTime;
-			
 			while($e.data.bytesAvailable > 0) {
 				_byteArray.writeFloat($e.data.readFloat());
 			}
