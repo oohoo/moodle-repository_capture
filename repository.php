@@ -37,10 +37,10 @@ function display_page()
     $PAGE->set_pagelayout('embedded');
     $PAGE->set_context($context);
 
-    $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'));
-    $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js'));
+    $PAGE->requires->js(new moodle_url('ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'));
+    $PAGE->requires->js(new moodle_url('ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js'));
     $PAGE->requires->js('/repository/capture/js/capture.js');
-    $PAGE->requires->css(new moodle_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css'));
+    $PAGE->requires->css(new moodle_url('ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css'));
     $PAGE->requires->css('/repository/capture/css/capture.css');
 
     //Set page parameters
