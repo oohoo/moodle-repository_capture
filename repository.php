@@ -62,7 +62,7 @@ function display_page()
 
     //Set page parameters
     $urlpage = "$CFG->wwwroot/repository/capture/repositiory.php";
-    $titlepage = get_string('head_index_admin', 'local_placement');
+    $titlepage = get_string('head_index', 'repository_capture');
     $record_video = get_config('capture', 'record_video');
     $record_audio = get_config('capture', 'record_audio');
     $record_photo = get_config('capture', 'record_photo');

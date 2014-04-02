@@ -41,6 +41,7 @@ $string['err_record_ffmpeg_exec'] = 'L\'execution de ffmpeg avec ce chemin a éc
 $string['err_record_file_not_exists'] = 'L\'enregistrement n\'existe pas. Il est possible que le serveur ne soit pas bien configuré. Vérifier que le dossier temporaire est autorisé en écriture et que FFMPEG est bien installé.';
 $string['err_record_fps_range'] = 'La valeur doit être comprise entre 10 et 60';
 $string['err_record_quality_range'] = 'La valeur doit être comprise entre 20 et 100';
+$string['head_index'] = 'Capture';
 $string['pluginname'] = 'Capture';
 $string['pluginname_help'] = 'Enregistrement un fichier audio ou vidéo directement dans Moodle et le téléverse dans le système de fichiers Moodle.';
 $string['capture:audio'] = 'Utiliser le mode Audio de Capture dans le gestionnaire de fichiers';
