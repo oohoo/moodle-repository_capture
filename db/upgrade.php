@@ -50,6 +50,12 @@ function xmldb_repository_capture_upgrade($oldversion)
         //Patch the problem with chrome speed audio recording
         upgrade_plugin_savepoint(true, 2013072200, 'repository', 'capture');
     }
+    
+    if ($oldversion < 2014040200)
+    {
+        //Update Moodle 2.6
+        upgrade_plugin_savepoint(true, 2014040200, 'repository', 'capture');
+    }
 
     return true;
 }

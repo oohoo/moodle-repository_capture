@@ -32,15 +32,32 @@ function display_page()
     require_login(1, true);
 
     // Set the principal parameters
-    $context = get_context_instance(CONTEXT_COURSE, 1);
+    if(class_exists('context_course'))
+    {
+        $context = context_course::instance(1);
+    }
+    else
+    {
+        $context = get_context_instance(CONTEXT_COURSE, 1);
+    }
 
     $PAGE->set_pagelayout('embedded');
     $PAGE->set_context($context);
 
-    $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'));
-    $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js'));
+    //Moodle 2.5 JQUERY condition
+    if (!method_exists(get_class($PAGE->requires), 'jquery'))
+    {
+        $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'));
+        $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js'));
+        $PAGE->requires->css(new moodle_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css'));
+    }
+    else
+    {
+        $PAGE->requires->jquery();
+        $PAGE->requires->jquery_plugin('ui');
+        $PAGE->requires->jquery_plugin('ui-css');
+    }
     $PAGE->requires->js('/repository/capture/js/capture.js');
-    $PAGE->requires->css(new moodle_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css'));
     $PAGE->requires->css('/repository/capture/css/capture.css');
 
     //Set page parameters

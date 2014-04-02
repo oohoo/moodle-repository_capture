@@ -129,9 +129,13 @@ if(typeof jQuery != 'undefined')
                 primary: 'ui-icon-record'
             },
             text: false
-        }).change(function(){
-            rra.btn_record_click($(this).is(':checked'));
+        }).click(function(){
+            $(this).toggleClass('checked');
+            rra.btn_record_click($(this).hasClass('checked'));
         });
+        /*.change(function(){
+            rra.btn_record_click($(this).is(':checked'));
+        });*/
         rra.btn_stop = $('#btn_stop').button({
             icons: {
                 primary: 'ui-icon-stop'

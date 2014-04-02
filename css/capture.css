@@ -126,9 +126,17 @@ html, body
     background: url("../pix/btn_record_selected.png") no-repeat center center;
 }
 
+#record_toolbar input[type="checkbox"] + label
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
 #record_toolbar #btn_stop
 {
     margin-left: 1px;
+    vertical-align: top;
 }
 
 #record_toolbar .ui-icon-stop

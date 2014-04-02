@@ -137,7 +137,16 @@ class repository_capture extends repository
      */
     public function supported_filetypes()
     {
-        $context = get_context_instance(CONTEXT_COURSE, 1);
+        //New context call from moodle 2.5
+        if(class_exists('context_course'))
+        {
+            $context = context_course::instance(1);
+        }
+        else
+        {
+            $context = get_context_instance(CONTEXT_COURSE, 1);
+        }
+        
         $filetypes = array();
         if(has_capability("repository/capture:view", $context))
         {
@@ -434,7 +443,15 @@ class repository_capture extends repository
         global $USER, $CFG;
 
         $fs = get_file_storage();
-        $context = get_context_instance(CONTEXT_USER, $USER->id);
+        //New context call from moodle 2.5
+        if(class_exists('context_user'))
+        {
+            $context = context_user::instance($USER->id);
+        }
+        else
+        {
+            $context = get_context_instance(CONTEXT_USER, $USER->id);
+        }
 
         //Get mime types
         if ((is_array($types) and in_array('*', $types)) or $types == '*')
