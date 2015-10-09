@@ -127,7 +127,14 @@ package org.oohoo.videorecorder
 			if(checkAndSetHardware())
 			{
 				frames = new Array();
-				micUtil = new MicRecorderUtil(microphone);
+				if(!recordPhotoOnly)
+				{
+					micUtil = new MicRecorderUtil(microphone);
+				}
+				else
+				{
+					micUtil = null;
+				}
 				return true;
 			}
 			else
@@ -523,6 +530,11 @@ package org.oohoo.videorecorder
 					setTimeout(saveImage, 40, 1, startframe, endframe, endframe-startframe+1);
 				}
 			}
+			else
+			{
+				
+				setTimeout(saveImage, 40, 1, startframe, endframe, 1);
+			}
 		}
 		
 		/**
@@ -591,14 +603,17 @@ package org.oohoo.videorecorder
 			}
 			else //If it is the last frame
 			{
-				//Save the sound
-				var waveEncode:WaveEncoder = new WaveEncoder(1);
-				//It is an audio with one Channel 16 bits and 44KHz
-				var waveFile:ByteArray = waveEncode.encode(audiopart, 1, 16, 44100);
-				//Add the wave file to the zip
-				zipfile.addFile(waveFile,"audio.wav");
-				//Call the JS 
-				ExternalInterface.call(prefixJS+"videorecorder_addAudio");
+				if(!recordPhotoOnly)
+				{
+					//Save the sound
+					var waveEncode:WaveEncoder = new WaveEncoder(1);
+					//It is an audio with one Channel 16 bits and 44KHz
+					var waveFile:ByteArray = waveEncode.encode(audiopart, 1, 16, 44100);
+					//Add the wave file to the zip
+					zipfile.addFile(waveFile,"audio.wav");
+					//Call the JS 
+					ExternalInterface.call(prefixJS+"videorecorder_addAudio");
+				}
 				
 				//Get the zip file
 				var fileRef:FileReference = new FileReference();
@@ -607,7 +622,6 @@ package org.oohoo.videorecorder
 				//Encode the zip in base 64
 				var zipData:Base64Encoder = new Base64Encoder();
 				zipData.encodeBytes(zipBytes);
-				
 				
 				ExternalInterface.call(prefixJS+"videorecorder_sendFileData", zipData.toString());
 			}

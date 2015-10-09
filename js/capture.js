@@ -38,15 +38,15 @@ if(typeof jQuery != 'undefined')
         $('input[name="accepted_types[]"]', parent_block).each(function()
         {
             all_ok = false;
-            if($(this).val() == '.mp3')
+            if($(this).val() === '.mp3')
             {
                 mp3_ok = true;
             }
-            else if($(this).val() == '.mp4')
+            else if($(this).val() === '.mp4')
             {
                 mp4_ok = true;
             }
-            else if($(this).val() == '.jpg')
+            else if($(this).val() === '.jpg')
             {
                 jpg_ok = true;
             }
@@ -77,6 +77,11 @@ if(typeof jQuery != 'undefined')
         
         //Set the handle now it exists
         rra.slider_time_handle = $('.ui-slider-handle', rra.slider_time);
+        //Patch Bootstrap
+        if(typeof rra.slider_time_handle.tooltip.noConflict !== 'undefined')
+        {
+            rra.slider_time_handle.tooltip.noConflict();
+        }
         rra.slider_time_handle.attr('title', ' ');
         rra.slider_time_handle.tooltip({
             content: rra.format_displayed_time(rra.slider_time.slider('option', 'value')),
@@ -101,6 +106,12 @@ if(typeof jQuery != 'undefined')
         //Set the handle now it exists
         rra.slider_crop_handle1 = $('.ui-slider-handle', rra.slider_crop).first();
         rra.slider_crop_handle2 = $('.ui-slider-handle', rra.slider_crop).last();
+        //Patch Bootstrap
+        if(typeof rra.slider_crop_handle1.tooltip.noConflict !== 'undefined')
+        {
+            rra.slider_crop_handle1.tooltip.noConflict();
+            rra.slider_crop_handle2.tooltip.noConflict();
+        }
         rra.slider_crop_handle1.attr('title', ' ');
         rra.slider_crop_handle2.attr('title', ' ');
         rra.slider_crop_handle1.tooltip({

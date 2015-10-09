@@ -56,6 +56,12 @@ function xmldb_repository_capture_upgrade($oldversion)
         //Update Moodle 2.6
         upgrade_plugin_savepoint(true, 2014040200, 'repository', 'capture');
     }
+    
+    if ($oldversion < 2015100900)
+    {
+        //Add control in JS and fix in the flash
+        upgrade_plugin_savepoint(true, 2015100900, 'repository', 'capture');
+    }
 
     return true;
 }

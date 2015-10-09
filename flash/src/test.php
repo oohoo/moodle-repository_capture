@@ -41,7 +41,7 @@ if(isset($_REQUEST['bindata']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  dir="ltr" lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>test LanguageLag</title>
+    <title>test Capture</title>
 	<meta charset="utf-8">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
@@ -241,7 +241,7 @@ test...<br/>
 			$( "#slider-time" ).slider( "value", $('#time-begin').val() );
 		}
 		function test_videorecorder_sendFileData(filedata)
-		{
+		{console.log(filedata);
 			$("#bindata").html(filedata);
 		}
 	</script>
